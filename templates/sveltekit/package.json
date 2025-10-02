@@ -1,8 +1,0 @@
-{
-  "name": "create-svelte-node-cli",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "sv": "latest"
-  }
-}

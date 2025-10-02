@@ -1,0 +1,14 @@
+{
+    "name": "mcp-server",
+    "version": "1.0.0",
+    "description": "MCP Server for Arbitrage Bot Data Layer",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "koa": "^2.15.3",
+      "ws": "^8.18.0"
+    }
+  }
+  
