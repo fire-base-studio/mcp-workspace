@@ -32,9 +32,9 @@
       # To run something each time the workspace is (re)started, use the `onStart` hook
       onStart = {
         # Устанавливаем зависимости нашего сервера.
-        install = "cd phase-1 && npm install";
+        install = "cd server && npm install";
         # Сразу запускаем сервер в фоновом режиме.
-        start = "cd phase-1 && npm start";
+        start = "cd server && npm start";
       };
 
     };
@@ -47,7 +47,7 @@
           # Команда для запуска сервера
           command = ["npm" "run" "start"];
           # Рабочая директория для команды
-          cwd = "phase-1";
+          cwd = "server";
           # Менеджер "web" говорит IDX, что это веб-сервер
           manager = "web";
         };

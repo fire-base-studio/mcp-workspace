@@ -1,0 +1,13 @@
+{
+    "name": "mcp-api-server",
+    "version": "1.0.0",
+    "description": "A simple API server for the Model Context Protocol",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "koa": "^2.15.3",
+      "ws": "^8.18.0"
+    }
+  }

@@ -1,0 +1,41 @@
+{
+  "name": "MCP Server Starter",
+  "description": "A template for creating MCP (Message Control Protocol) servers.",
+  "icon": "https://www.gstatic.com/monospace/231115/logo_nodejs.svg",
+  "publisher": "noshimorimoshi Github user",
+  "categories": ["Backend"],
+  "tags": ["mcp", "server", "nodejs", "docker"],
+  "params": [
+    {
+      "name": "server_type",
+      "label": "Server Type",
+      "description": "Choose the type of MCP server to create.",
+      "type": "select",
+      "options": [
+        {
+          "value": "api",
+          "label": "API Server",
+          "description": "A simple API server for the Model Context Protocol."
+        },
+        {
+          "value": "web",
+          "label": "Web Server",
+          "description": "A simple Web server for the Model Context Protocol."
+        }
+      ],
+      "defaultValue": "web"
+    }
+  ],
+  "postCreate": {
+    "steps": [
+      {
+        "name": "Move selected template files to root",
+        "run": "mv -n {{.params.server_type}}/* . && mv -n {{.params.server_type}}/.??* ."
+      },
+      {
+        "name": "Remove template directories",
+        "run": "rm -rf api web js-mcp-server-templates"
+      }
+    ]
+  }
+}
